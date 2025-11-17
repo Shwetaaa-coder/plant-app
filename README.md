@@ -35,7 +35,7 @@ Authentication: Firebase Auth / JWT
 
 /assets/screenshots/
 📦 Installation
-git clone https://github.com/your-username/plant-app.git
+git clone [https://github.com/Shwetaaa_coder/plant-app.git](https://github.com/Shwetaaa-coder/plant-app/tree/main)
 cd plant-app
 npm install
 npm start
