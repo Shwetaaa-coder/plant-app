@@ -32,23 +32,23 @@ Browse and save plant profiles with useful information for future reference.
 
 ### Frontend
 
-* [Add actual technology]
+* React , Javascript
 
 ### Backend
 
-* [Add actual technology, if applicable]
+* Node.js
 
 ### Database
 
-* [Add actual database]
+* Firebase
 
 ### Authentication
 
-* [Add actual authentication technology, if applicable]
-
+* Firebase
+  
 ### Cloud Storage
 
-* [Add actual storage technology, if applicable]
+* Cloudinary
 
 ### Tools
 
@@ -59,19 +59,10 @@ Browse and save plant profiles with useful information for future reference.
 
 ### 🏠 Home / Dashboard
 
-*Add your application screenshot here.*
+<img width="560" height="332" alt="image" src="https://github.com/user-attachments/assets/95594c93-b5f8-4513-88c0-1f65a1295262" />
 
-### 🌿 Plant Identification
 
-*Add your plant identification screenshot here.*
 
-### 💧 Plant Care / Reminders
-
-*Add your watering or care reminder screenshot here.*
-
-### 📅 Growth Tracking
-
-*Add your growth tracking screenshot here.*
 
 ## 🚀 Getting Started
 
@@ -135,7 +126,7 @@ The project demonstrates practical application development skills including user
 
 ## 🔗 Live Demo
 
-*Add your live deployment link here, if available.*
+(https://gardening-planner.vercel.app/)
 
 ## 🔮 Future Improvements
 
