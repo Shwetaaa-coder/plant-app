@@ -28,8 +28,6 @@ Browse and save plant profiles with useful information for future reference.
 
 ## 🛠️ Tech Stack
 
-> Update this section with the **actual technologies used in your project**.
-
 ### Frontend
 
 * React , Javascript
@@ -115,8 +113,6 @@ plant-app/
 ├── package.json
 └── README.md
 ```
-
-> Update the structure to match your actual repository.
 
 ## 🎯 Project Objective
 
