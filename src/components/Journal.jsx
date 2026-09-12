@@ -1,5 +1,4 @@
-// src/components/PlantJournal.js
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 
 const PlantJournal = () => {
   const [entries, setEntries] = useState(() => {

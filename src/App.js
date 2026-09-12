@@ -20,30 +20,32 @@ function App() {
   const { user } = useAuth(); // ✅ Get the logged-in user
 
   return (
-    <>
+    <div className="app-container">
       <Navbar />
-      
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/identify" element={<PlantIdentifier />} />
-        <Route path="/details/:id" element={<PlantDetails />} />
-        <Route path="/library" element={<PlantLibrary />} />
-        <Route path="/result" element={<PlantResult />} />
-        <Route path="/community" element={<CommunityPage />} />
-        <Route path="/chatbot" element={<ChatBot />} />
-        <Route path="/login" element={<Login />} />
 
-        {/* ✅ Protected routes below */}
-        <Route path="/my-garden" element={user ? <MyGarden /> : <Navigate to="/login" />} />
-        <Route path="/reminders" element={user ? <SmartReminder /> : <Navigate to="/login" />} />
-        <Route path="/journal" element={user ? <Journal /> : <Navigate to="/login" />} />
+      <main className="content">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/identify" element={<PlantIdentifier />} />
+          <Route path="/details/:id" element={<PlantDetails />} />
+          <Route path="/library" element={<PlantLibrary />} />
+          <Route path="/result" element={<PlantResult />} />
+          <Route path="/community" element={<CommunityPage />} />
+          <Route path="/chatbot" element={<ChatBot />} />
+          <Route path="/login" element={<Login />} />
 
-        {/* Optional: Redirect unknown paths to home */}
-        <Route path="*" element={<Navigate to="/" />} />
-      </Routes>
+          {/* ✅ Protected routes below */}
+          <Route path="/my-garden" element={user ? <MyGarden /> : <Navigate to="/login" />} />
+          <Route path="/reminders" element={user ? <SmartReminder /> : <Navigate to="/login" />} />
+          <Route path="/journal" element={user ? <Journal /> : <Navigate to="/login" />} />
+
+          {/* Optional: Redirect unknown paths to home */}
+          <Route path="*" element={<Navigate to="/" />} />
+        </Routes>
+      </main>
 
       <Footer />
-    </>
+    </div>
   );
 }
 

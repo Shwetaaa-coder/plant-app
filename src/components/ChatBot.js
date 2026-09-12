@@ -78,12 +78,9 @@
 // export default ChatBot;
 
 import React, { useState } from "react";
-
-console.log(process.env);
+import "./ChatBot.css";
 
 const ChatBot = () => {
-     console.log("API Key:", process.env.REACT_APP_OPENAI_API_KEY); // Add here to debug
-
   const [input, setInput] = useState("");
   const [messages, setMessages] = useState([
     { sender: "bot", text: "Hi! Ask me anything about plants." },
@@ -91,7 +88,6 @@ const ChatBot = () => {
   const [loading, setLoading] = useState(false);
 
   const sendMessage = async () => {
-    console.log("API Key inside sendMessage:", process.env.REACT_APP_OPENAI_API_KEY);
     if (!input.trim()) return;
     const userMessage = { sender: "user", text: input.trim() };
 
@@ -103,9 +99,9 @@ const ChatBot = () => {
       const response = await fetch("https://api.openai.com/v1/chat/completions", {
         method: "POST",
         headers: {
-    "Content-Type": "application/json",
-    Authorization: `Bearer ${process.env.REACT_APP_OPENAI_API_KEY}`, // use env var here
-  },
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${process.env.REACT_APP_OPENAI_API_KEY}`,
+        },
         body: JSON.stringify({
           model: "gpt-3.5-turbo",
           messages: [
@@ -144,45 +140,30 @@ const ChatBot = () => {
   };
 
   return (
-    <div style={{ maxWidth: "600px", margin: "auto" }}>
-      <div
-        style={{
-          border: "1px solid #ccc",
-          padding: "1rem",
-          minHeight: "300px",
-          overflowY: "auto",
-        }}
-      >
-        {messages.map((msg, idx) => (
-          <p
-            key={idx}
-            style={{
-              textAlign: msg.sender === "user" ? "right" : "left",
-              backgroundColor: msg.sender === "user" ? "#d1e7dd" : "#f8d7da",
-              padding: "0.5rem",
-              borderRadius: "8px",
-              margin: "0.3rem 0",
-            }}
-          >
-            {msg.text}
-          </p>
-        ))}
-        {loading && <p>Typing...</p>}
-      </div>
+    <div className="chat-shell">
+      <div className="chat-container">
+        <div className="chat-window">
+          {messages.map((msg, idx) => (
+            <div key={idx} className={`chat-bubble ${msg.sender}`}>
+              {msg.text}
+            </div>
+          ))}
+          {loading && <div className="chat-bubble bot">Typing...</div>}
+        </div>
 
-      <form onSubmit={handleSubmit} style={{ marginTop: "1rem" }}>
-        <input
-          type="text"
-          value={input}
-          onChange={(e) => setInput(e.target.value)}
-          style={{ width: "80%", padding: "0.5rem" }}
-          placeholder="Ask your plant question..."
-          disabled={loading}
-        />
-        <button type="submit" disabled={loading} style={{ padding: "0.5rem 1rem" }}>
-          Send
-        </button>
-      </form>
+        <form className="chat-input" onSubmit={handleSubmit}>
+          <input
+            type="text"
+            value={input}
+            onChange={(e) => setInput(e.target.value)}
+            placeholder="Ask your plant question..."
+            disabled={loading}
+          />
+          <button type="submit" disabled={loading}>
+            Send
+          </button>
+        </form>
+      </div>
     </div>
   );
 };

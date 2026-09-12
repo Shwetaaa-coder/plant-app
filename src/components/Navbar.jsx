@@ -1,13 +1,12 @@
-// src/components/Navbar.jsx
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
 import animatedVideo from '../assets/animation.mp4';
 
-import { useAuth } from '../context/AuthContext'; // ✅ Correct way
+import { useAuth } from '../context/AuthContext';
 
 const Navbar = () => {
-  const { user, logout } = useAuth(); // ✅ Hook works here
+  const { user, logout } = useAuth();
 
   return (
     <nav className="navbar">

@@ -56,37 +56,31 @@ We can currently identify more than 30,000 plant species from around the world.`
             <input type="email" placeholder="Your email" />
             <button type="submit">Subscribe</button>
           </form>
-          <small>By subscribing you agree to our <a href="#">Privacy Policy</a></small>
+          <small>By subscribing you agree to our <a href="/">Privacy Policy</a></small>
         </div>
 
         {/* Company Info */}
         <div className="footer-section">
           <h4>kindwise</h4>
           <ul>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">FAQ</a></li>
-            <li><a href="#">Pricing</a></li>
-            <li><a href="#">Careers</a></li>
-          
-            <li><a href="#">Contact</a></li>
+            <li><a href="/">About</a></li>
+            <li><a href="/community">Blog</a></li>
+            <li><a href="/">FAQ</a></li>
+            <li><a href="/library">Pricing</a></li>
+            <li><a href="/">Careers</a></li>
+            <li><a href="/community">Contact</a></li>
           </ul>
         </div>
-
-        
 
         {/* Blog & Media */}
         <div className="footer-section blog-media">
           <div>
             <h4>Blog</h4>
             <ul>
-              <li><a href="#">New plant.health feature: follow-up questions</a></li>
-              <li><a href="#">Disease symptoms</a></li>
-              
-              
+              <li><a href="/community">New plant.health feature: follow-up questions</a></li>
+              <li><a href="/library">Disease symptoms</a></li>
             </ul>
           </div>
-          
         </div>
       </div>
 
@@ -94,9 +88,9 @@ We can currently identify more than 30,000 plant species from around the world.`
       <div className="footer-bottom">
         <p>© 2025 kindwise. All rights reserved.</p>
         <ul className="legal-links">
-          <li><a href="#">Web Privacy Policy ↗</a></li>
-          <li><a href="#">Cookie Policy ↗</a></li>
-          <li><a href="#">API Terms and Conditions ↗</a></li>
+          <li><a href="/">Web Privacy Policy ↗</a></li>
+          <li><a href="/">Cookie Policy ↗</a></li>
+          <li><a href="/">API Terms and Conditions ↗</a></li>
         </ul>
       </div>
     </footer>
