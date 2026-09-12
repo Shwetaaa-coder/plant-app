@@ -122,7 +122,7 @@ The project demonstrates practical application development skills including user
 
 ## 🔗 Live Demo
 
-(https://gardening-planner.vercel.app/)
+https://plant-app-sage.vercel.app/
 
 ## 🔮 Future Improvements
 
